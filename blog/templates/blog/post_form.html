@@ -1,0 +1,28 @@
+{% block title %}post_form.html{% endblock %}
+
+{% block content %}
+<div id="content">
+	<form action="." method="post">{% csrf_token %}
+
+	<fieldset class="aligned">
+
+		<div class="form-row">
+			{{ form.title.label_tag }} {{ form.title }}
+		</div>
+
+		<div class="form-row">
+			{{ form.slug.label_tag }} {{ form.slug }}
+		</div>
+
+		<div class="form-row">
+			{{ form.content.label_tag }} {{ form.content }}
+		</div>
+	</fieldset>
+
+	<div class="submit-row">
+		<input type="submit" value="Submit"/>
+	</div>
+
+	</form>
+</div>
+{% endblock %}

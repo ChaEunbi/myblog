@@ -1,0 +1,9 @@
+<h1>Blog List</h1>
+
+{% for post in posts %}
+<h2><li><a href = '{{ post.get_absolute_url }}'>{{ post.title }}</a></li></h2>
+{% endfor %}
+
+<br/>
+<a href="{% url 'blog:add' %}">글쓰기</a>
+

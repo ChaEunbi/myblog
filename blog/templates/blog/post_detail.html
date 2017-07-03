@@ -1,0 +1,5 @@
+<h2>{{ object.title }}</h2>
+<div class="body">
+	{{ object.content|linebreaks }}
+</div>
+<a href = "{% url 'blog:post_list' %}">목록</a>
